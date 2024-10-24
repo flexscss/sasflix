@@ -9,6 +9,5 @@
 const postStore = usePostStore()
 const route = useRoute()
 const id = route.params.id as string
-const post = await postStore.getPost(id)
-const comments = await postStore.getCommentsForPost(id)
+const [post, comments] = await Promise.all([postStore.getPost(id), postStore.getCommentsForPost(id)])
 </script>
