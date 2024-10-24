@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Post } from '@/types/post.ts'
-
 const props = defineProps({
   post: {
     type: Object as () => Post,

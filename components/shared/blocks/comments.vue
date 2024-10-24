@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PostComment } from '@/types/post.ts'
 import Comment from '@/components/shared/widgets/comment.vue'
 
 const props = defineProps({

@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**']
   },
 
+  imports: {
+    dirs: ['types/*.ts']
+  },
+
   runtimeConfig: {
     public: {
       BASE_URL: process.env.BASE_URL,

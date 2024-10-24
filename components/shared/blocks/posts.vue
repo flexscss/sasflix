@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Post } from '@/types/post.ts'
 import vPost from '@/components/shared/widgets/post.vue'
 
 const props = defineProps({
