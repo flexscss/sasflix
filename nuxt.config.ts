@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       BASE_URL: process.env.BASE_URL,
+      API_URL: process.env.API_URL,
       META_TITLE: process.env.META_TITLE,
       META_DESCRIPTION: process.env.META_DESCRIPTION,
       META_IMAGE: process.env.META_IMAGE

@@ -1,9 +1,10 @@
 <template>
   <div>
-    Home page
+    {{ posts }}
   </div>
 </template>
 
 <script setup lang="ts">
-useSeo()
+const postStore = usePostStore()
+const posts = await postStore.getPosts()
 </script>

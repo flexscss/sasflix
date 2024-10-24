@@ -22,3 +22,9 @@ export interface PostComment {
     username: string
   }
 }
+
+export interface ListResponse {
+  total: number
+  skip: number
+  limit: number
+}
