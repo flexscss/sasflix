@@ -12,7 +12,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['SFPro', 'sans-serif']
+        sans: ['SFPro', 'sans-serif'],
+        display: ['SFProDisplay', 'sans-serif']
       },
       colors: {
         'text': '#181921',
@@ -28,6 +29,9 @@ export default {
         }
       },
       fontSize: {
+        header: ['40px', {
+          letterSpacing: '0px'
+        }],
         h1: ['28px', {
           letterSpacing: '-1.45px'
         }],

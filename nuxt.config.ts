@@ -40,7 +40,8 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preload', href: '/fonts/SFProText-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/SFProText-Medium.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/SFProText-Bold.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+        { rel: 'preload', href: '/fonts/SFProText-Bold.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/SFProDisplay-Bold.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ]
     }
   }
