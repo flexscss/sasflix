@@ -37,8 +37,11 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: process.env.META_TITLE,
-      meta: [{ name: 'description', content: process.env.META_DESCRIPTION }]
+      link: [
+        { rel: 'preload', href: '/fonts/SFProText-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/SFProText-Medium.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/SFProText-Bold.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+      ]
     }
   }
 })
