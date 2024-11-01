@@ -1,7 +1,7 @@
 <template>
   <div>
     <vHeader />
-    <div>
+    <div class="container pb-16">
       <slot />
     </div>
   </div>
