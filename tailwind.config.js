@@ -50,8 +50,8 @@ export default {
       container: {
         center: true,
         screens: {
-          sm: '676px',
-          md: '676px',
+          sm: '100%',
+          md: '100%',
           lg: '676px',
           xl: '676px'
         },
@@ -62,6 +62,14 @@ export default {
           'xl': '0rem',
           '2xl': '0rem'
         }
+      },
+      screens: {
+        sm: {
+          min: '320px',
+          max: '1023px'
+        },
+        md: '768px',
+        lg: '1024px'
       },
       spacing: {
         0: '0px',

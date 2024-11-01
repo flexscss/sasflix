@@ -15,8 +15,8 @@
     <p class="mb-5.5">
       {{ props.post.body }}
     </p>
-    <div class="flex items-center">
-      <div class="flex mr-2">
+    <div class="flex items-center sm:grid sm:grid-cols-2 sm:gap-2">
+      <div class="flex mr-2 sm:mr-0">
         <RateButton
           type="like"
           :count="props.post.reactions.likes"
@@ -32,17 +32,28 @@
           @click="$emit('rate', ReactionType.Dislike)"
         />
       </div>
-      <nuxt-link
-        v-if="props.hasCommentsLink"
-        :to="{ name: 'posts-id', params: { id: props.post.id }, hash: '#comments' }"
-        class="text-caption mr-2 link-border"
-      >
-        Open comments
-      </nuxt-link>
-      <div class="text-caption text-gray-primary-200 mr-2">
-        {{ formatRelativeDate(new Date()) }}
+      <div class="flex items-center sm:justify-end">
+        <nuxt-link
+          v-if="props.hasCommentsLink"
+          :to="{ name: 'posts-id', params: { id: props.post.id }, hash: '#comments' }"
+          class="text-caption mr-2 link-border sm:hidden"
+        >
+          Open comments
+        </nuxt-link>
+        <div class="text-caption text-gray-primary-200 mr-2 sm:mr-0">
+          {{ formatRelativeDate(new Date()) }}
+        </div>
       </div>
-      <TagsGroup :tags="props.post.tags" />
+      <TagsGroup :tags="props.post.tags" class="sm:col-span-2" />
+      <div class="hidden sm:block col-span-2">
+        <nuxt-link
+          v-if="props.hasCommentsLink"
+          :to="{ name: 'posts-id', params: { id: props.post.id }, hash: '#comments' }"
+          class="text-caption link-border"
+        >
+          Open comments
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
