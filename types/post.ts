@@ -4,6 +4,7 @@ export interface Post {
   body: string
   userId: number
   views: number
+  userRate?: string
   reactions: {
     likes: number
     dislikes: number
@@ -16,6 +17,7 @@ export interface PostComment {
   id: number
   likes: number
   postId: number
+  isRemoved?: boolean
   user: {
     fullName: string
     id: number
@@ -27,4 +29,9 @@ export interface ListResponse {
   total: number
   skip: number
   limit: number
+}
+
+export enum ReactionType {
+  Like = 'like',
+  Dislike = 'dislike'
 }
