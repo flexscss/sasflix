@@ -1,75 +1,35 @@
-# Nuxt Minimal Starter
+# Тестовое задание для sasflix
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Задача
+Реализовать приложение с общим списком постов и отдельными страницами с комментариями. Код на Nuxt3/Vue3, TypeScript и Pinia, и разбит на компоненты.
 
-## Setup
+Приложения должно:
 
-Make sure to install dependencies:
+- повторять макет в Фигме;
+- выводить первые 5 постов из API на общей странице;
+- быть написано без использования готовых библиотек компонентов;
+- иметь кликабельные кнопки лайка и дизлайка;
+- удалять комментарии, изменять значении и стили кнопок локально.
 
-```bash
-# npm
-npm install
+## Решение
+Проект реализован на **Nuxt 3** с использованием **Pinia** для управления состоянием и **Tailwind** для написания стилей. Настроена строгая конфигурация **TSLint** для соблюдения стандартов кода. Весь интерфейс собран по макету из **Figma**, а данные подтягиваются через **API** с [dummyjson.com](https://dummyjson.com). Проект разбит на небольшие, независимые "глупые" компоненты, которые не зависят от хранилища, что позволяет безопасно их переиспользовать и легко изменять без влияния на основное состояние приложения. Такой подход обеспечивает гибкость и масштабируемость проекта. Так же добавлен базовый адаптив для мобильных устройств и методы для установки мета тегов.
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+**Запуск в режиме разработки**
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+**Сборка проекта для продакшена**
+```
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+**Запуск продакшн-сервера**
+```
+npm run start
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Линтинг кода**
+```
+npm run lint
+```
